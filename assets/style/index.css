@@ -1,0 +1,47 @@
+.video-sources__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+  .video-sources__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.video-sources__plus {
+  width: 64px;
+  align-self: center;
+  margin: 2rem 0;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-sources__button {
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 24px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 900px) {
+  .video {
+    width: calc(50% - 64px);
+    border-radius: 4px;
+  }
+}
+
+.output-canvas {
+  width: 100%;
+  margin-top: 4rem;
+  border-radius: 4px;
+  box-shadow: 0 0 24px 6px rgba(0, 0, 0, 0.5);
+}
