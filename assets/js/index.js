@@ -32,9 +32,11 @@ function init() {
 
   // Source video
   sourceVideoEl = document.getElementById('source-video');
+  sourceVideoLoaded = sourceVideoEl.readyState === 4;
 
   // Background video
   backgroundVideoEl = document.getElementById('background-video');
+  backgroundVideoLoaded = backgroundVideoEl.readyState === 4;
 
   // Play button
   playButtonEl = document.getElementById('play-button');
@@ -45,15 +47,23 @@ function init() {
   // Info for Chrome only support
   chromeOnlyInfoBoxEl = document.getElementById('chrome-only-info-box');
 
+  // If it's not Chrome then end the script
   const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
   if (!isChrome) {
     playButtonEl.classList.add('hidden');
     chromeOnlyInfoBoxEl.classList.remove('hidden');
+    return;
   }
 
-  // When all videos are loaded we can enable the UI
-  sourceVideoEl.addEventListener('loadeddata', handleVideoLoaded);
-  backgroundVideoEl.addEventListener('loadeddata', handleVideoLoaded);
+  // If videos are already loaded then enable then UI
+  if (sourceVideoLoaded && backgroundVideoLoaded) {
+    initVideoElements();
+  } else {
+
+    // When all videos are loaded we can enable the UI
+    sourceVideoEl.addEventListener('loadeddata', handleVideoLoaded);
+    backgroundVideoEl.addEventListener('loadeddata', handleVideoLoaded);
+  }
 }
 
 function handleVideoLoaded(event) {
@@ -76,6 +86,7 @@ function initVideoElements() {
   // Load the worker
   worker = new Worker('/assets/js/index.worker.js');
 
+  // End the script if videos have different ratio
   if ((sourceVideoEl.videoWidth / sourceVideoEl.videoHeight) !== (backgroundVideoEl.videoWidth / backgroundVideoEl.videoHeight)) {
     console.error('Videos have different ratio', sourceVideoEl.videoWidth, sourceVideoEl.videoHeight, backgroundVideoEl.videoWidth, backgroundVideoEl.videoHeight);
     return;
