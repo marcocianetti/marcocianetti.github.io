@@ -1,61 +1,96 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Realtime Video Processing con JavaScript (senza Librerie) | Marco Cianetti</title>
+  <title>Marco Cianetti | Web Developer specializzato in JavaScript</title>
   <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAgMAAAAhHED1AAAADFBMVEUbY/8bY/8bY//////r7berAAAAAnRSTlPv4A9/wGMAAACGSURBVHja7dyxCYBADAXQuI5TOK6chSO4jyNYqIXClRYRVHy//CFvgpDoIpUmSjLR5vZ7AAAAAAAAAAAAAAB8BBi268wAAAAAAPwPWOt0PJqlNtPpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLuA5++RAAAAAAAAAAAAAABwO1CSSb8v2AGo9RWfYHBBMgAAAABJRU5ErkJggg==" />
   <meta name="theme-color" content="#1b62ff" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <script language="javascript" type="text/javascript" src="/assets/js/index.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="/assets/style/base.css">
-  <link rel="stylesheet" type="text/css" href="/assets/style/index.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 </head>
 
 <body>
   <header>
-    <div class="header__container flex--row">
-      <a href="https://marcocianetti.com" class="header__logo">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAgMAAAAhHED1AAAADFBMVEUbY/8bY/8bY//////r7berAAAAAnRSTlPv4A9/wGMAAACGSURBVHja7dyxCYBADAXQuI5TOK6chSO4jyNYqIXClRYRVHy//CFvgpDoIpUmSjLR5vZ7AAAAAAAAAAAAAAB8BBi268wAAAAAAPwPWOt0PJqlNtPpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLuA5++RAAAAAAAAAAAAAABwO1CSSb8v2AGo9RWfYHBBMgAAAABJRU5ErkJggg==" alt="Logo di Marco Cianetti">
+    <div class="header__container container flex--row">
+      <a href="/" class="header__logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAgMAAAAhHED1AAAADFBMVEUbY/8bY/8bY//////r7berAAAAAnRSTlPv4A9/wGMAAACGSURBVHja7dyxCYBADAXQuI5TOK6chSO4jyNYqIXClRYRVHy//CFvgpDoIpUmSjLR5vZ7AAAAAAAAAAAAAAB8BBi268wAAAAAAPwPWOt0PJqlNtPpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLuA5++RAAAAAAAAAAAAAABwO1CSSb8v2AGo9RWfYHBBMgAAAABJRU5ErkJggg==" alt="Logo di Marco Cianetti" class="header__logo__img">
+        <span class="header__title">Marco Cianetti</span>
       </a>
-      <span class="header__title">Marco Cianetti | Realtime Video Processing con JavaScript</span>
     </div>
   </header>
 
   <main>
-    <div class="container">
-      <h1 class="title">Realtime Video Processing con JavaScript (senza Librerie)</h1>
-      <h2 class="subtitle">Script in JavaScript che permette la rimozione dello sfondo verde (Chroma Key) dai video. Qui l'articolo completo.</h2>
+
+    <div class="index-page__container container">
+      <div class="index-page__heading">
+        <div class="index-page__text-container">
+          <h1 class="index-page__title">
+            Ciao, sono
+            <br />
+            Marco Cianetti
+          </h1>
+          <h2 class="index-page__subtitle">Web Developer di Roma specializzato in JavaScript</h2>
+        </div>
+
+        <img src="https://d33wubrfki0l68.cloudfront.net/1bfa74cf13c6727c4e46ded6f132100881fc4d7a/44020/static/marco-cianetti-512px-c2ce78b9ef08fe376b5da8f7965e907a.jpg" class="index-page__author-card" />
+      </div>
+
+      <p>
+        Sviluppo principalmente siti web in
+        <a
+          title="Sito web di ReactJS"
+          href="https://reactjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ReactJS
+        </a>
+        e sono appassionato di <strong>Intelligenza Artificiale</strong>.
+      </p>
+      <p>
+        Con
+        <a
+          title="Sito web di 247X - Il tuo Team di Crescita Dedicato"
+          href="https://247x.io"
+          target="_blank"
+        >
+          247X - Il tuo Team di Crescita Dedicato
+        </a>
+        ho fatto della <strong>Metodologia Lean</strong> e dell'
+        <strong>Analisi dei Dati</strong> il mio mantra.
+      </p>
+      <p>
+        In questa pagina GitHub troverai <strong>Tutorial</strong> ed <strong>Esempi</strong> dei miei progetti.
+      </p>
     </div>
 
-    <div class="container">
-      <div class="video-sources__container">
-        <video id="source-video" src="/assets/video/video-source-hd.mp4" muted="true" loop="true" type="video/mp4" class="video"></video>
-        <span class="video-sources__plus">+</span>
-        <video id="background-video" src="/assets/video/video-background-fhd.mp4" muted="true" loop="true" type="video/mp4" class="video"></video>
-      </div>
-      <button id="play-button" disabled class="video-sources__button button--accent">Avvia</button>
-      <canvas id="output-canvas" class="output-canvas hidden"></canvas>
+    <section>
+      <div class="container">
+        <h3 class="section__title">Tutorial ed Esempi</h3>
 
-      <div id="chrome-only-info-box" class="info-box hidden">
-        <p>
-          🚨 Lo script è supportato solo da Chrome
-        </p>
+        <div class="list">
+          <a href="/tutorial/realtime-video-processing-con-javascript.html" class="list__link-item">
+            <p class="list__link-item__title">
+              Realtime video processing con JavaScript
+            </p>
+            <span class="list__link-item__subtitle">
+              Rimuovere in realtime il Chroma Key (lo sfondo verde) da un video e sostituirlo con un altro video
+            </span>
+          </a>
+        </ul>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
-    <div class="flex--column">
-      <span class="footer__item__title">Marco Cianetti</span>
-      <span class="footer__item__list-item">• LinkedIn: <a href="https://redstapler.co/realtime-video-processing-javascript-tutorial/" target="_blank">Link</a></span>
-      <span class="footer__item__list-item">• GitHub: <a href="https://www.pexels.com/video/a-woman-wearing-makeup-poses-in-different-angles-in-a-pictorial-3625060/" target="_blank">Link</a></span>
-    </div>
-    <div class="flex--column">
-      <span class="footer__item__title">Credits</span>
-      <span class="footer__item__list-item">• Articolo da cui ho preso spunto: <a href="https://redstapler.co/realtime-video-processing-javascript-tutorial/" target="_blank">Link</a></span>
-      <span class="footer__item__list-item">• Video sorgente: <a href="https://www.pexels.com/video/a-woman-wearing-makeup-poses-in-different-angles-in-a-pictorial-3625060/" target="_blank">Link</a></span>
-      <span class="footer__item__list-item">• Video sfondo: <a href="https://www.pexels.com/video/blazing-fire-2715412/" target="_blank">Link</a></span>
+    <div class="footer__container container">
+      <div class="flex--column">
+        <span class="footer__item__title">Contatti</span>
+        <span class="footer__item__list-item">• Sito personale: <a href="https://marcocianetti.com" target="_blank">Link</a></span>
+        <span class="footer__item__list-item">• LinkedIn: <a href="https://linkedin.com/in/marcocianetti" target="_blank">Link</a></span>
+        <span class="footer__item__list-item">• GitHub: <a href="https://github.com/marcocianetti" target="_blank">Link</a></span>
+      </div>
     </div>
   </footer>
 </body>

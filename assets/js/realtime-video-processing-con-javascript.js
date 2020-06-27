@@ -84,7 +84,7 @@ function handleVideoLoaded(event) {
 
 function initVideoElements() {
   // Load the worker
-  worker = new Worker('/assets/js/index.worker.js');
+  worker = new Worker('/assets/js/realtime-video-processing-con-javascript.worker.js');
 
   // End the script if videos have different ratio
   if ((sourceVideoEl.videoWidth / sourceVideoEl.videoHeight) !== (backgroundVideoEl.videoWidth / backgroundVideoEl.videoHeight)) {

@@ -1,0 +1,93 @@
+.index-page__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.index-page__heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+@media (min-width: 620px) {
+  .index-page__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 800px) {
+  .index-page__text-container {
+    width: calc(100% - 2rem - 165px);
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .index-page__text-container {
+    width: calc(100% - 2rem - 200px);
+    margin-right: 2rem;
+  }
+}
+
+.index-page__author-card {
+  display: none;
+  margin: 0 auto 2rem auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 620px) and (max-width: 800px) {
+  .index-page__author-card {
+    display: block;
+    width: 165px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .index-page__author-card {
+    display: block;
+    width: 200px;
+    margin: 0;
+  }
+}
+
+.index-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 620px) and (max-width: 800px) {
+  .index-page__title {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .index-page__title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 620px) {
+  h2.index-page__subtitle {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.index-page__section:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+.index-page__section-title {
+  margin-bottom: 2rem;
+}
