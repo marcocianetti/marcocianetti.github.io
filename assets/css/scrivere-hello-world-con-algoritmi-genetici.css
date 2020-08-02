@@ -1,0 +1,38 @@
+#solution-input {
+  
+}
+
+#solution-input-error {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--error-color);
+  border-radius: var(--border-radius);
+  color: var(--error-color);
+}
+
+#start-button {
+  margin: 2rem 0;
+}
+
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__header {
+  height: 48px;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.table__row {
+  height: 48px;
+}
+
+.table__row:nth-child(even) {
+  background-color: #393c43;
+}
+
+.table__cell {
+  text-align: center;
+}

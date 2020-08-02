@@ -1,15 +1,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Realtime Video Processing con JavaScript (senza Librerie) | Marco Cianetti</title>
+    <title>"Hello World" con gli Algoritmi Genetici | Marco Cianetti</title>
     <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAgMAAAAhHED1AAAADFBMVEUbY/8bY/8bY//////r7berAAAAAnRSTlPv4A9/wGMAAACGSURBVHja7dyxCYBADAXQuI5TOK6chSO4jyNYqIXClRYRVHy//CFvgpDoIpUmSjLR5vZ7AAAAAAAAAAAAAAB8BBi268wAAAAAAPwPWOt0PJqlNtPpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwLuA5++RAAAAAAAAAAAAAABwO1CSSb8v2AGo9RWfYHBBMgAAAABJRU5ErkJggg==" />
     <meta name="theme-color" content="#1b62ff" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <script language="javascript" type="text/javascript" src="/assets/js/realtime-video-processing-con-javascript.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="/assets/js/genetic-algorithm.js"></script>
+    <script language="javascript" type="text/javascript" src="/assets/js/scrivere-hello-world-con-algoritmi-genetici.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/realtime-video-processing-con-javascript.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/scrivere-hello-world-con-algoritmi-genetici.css">
   </head>
 
   <body>
@@ -24,25 +25,34 @@
 
     <main>
       <div class="page-info__container container">
-        <h1 class="page-info__title">Realtime Video Processing con JavaScript (senza Librerie)</h1>
-        <h2 class="page-info__subtitle">
-          Script in JavaScript che permette la rimozione dello sfondo verde (Chroma Key) dai video.
-        </h2>
+        <h1 class="page-info__title">Scrivere "Hello World" con gli Algoritmi Genetici</h1>
+        <h2 class="page-info__subtitle">Generazione di una stringa con gli Algoritmi Genetici.</h2>
+        <p class="page-info__description">
+          Scrivi una frase (di massimo 30 caratteri) e clicca sul tasto "Avvia" per lanciare 
+          l'algoritmo. Nella tabella sottostante potrai seguire l'evoluzione delle soluzioni durante la sua esecuzione.<br/><br/>
+          <a href="https://marcocianetti.com" title="Algoritmi genetici (con esempio) | Marco Cianetti" target="_blank">Qui</a> puoi trovare l'articolo completo.
+        </p>
       </div>
 
       <div class="container">
-        <div class="video-sources__container">
-          <video id="source-video" src="/assets/video/video-source-hd.mp4" muted="true" loop="true" type="video/mp4" class="video"></video>
-          <span class="video-sources__plus">+</span>
-          <video id="background-video" src="/assets/video/video-background-fhd.mp4" muted="true" loop="true" type="video/mp4" class="video"></video>
-        </div>
-        <button id="play-button" disabled class="video-sources__button button--accent">Avvia</button>
-        <canvas id="output-canvas" class="output-canvas hidden"></canvas>
+        <div class="flex--column">
+          <label for="solution-input">Frase da generare</label>
+          <input id="solution-input" name="solution-input" value="Hello World!" placeholder="Inserisci la frase che vuoi far generare (max 30 caratteri)" />
+          <span id="solution-input-error" class="hidden"></span>
 
-        <div id="chrome-only-info-box" class="info-box hidden">
-          <p>
-            🚨 Lo script è supportato solo da Google Chrome
-          </p>
+          <button id="start-button" class="button--accent">Avvia</button>
+  
+          <table id="results-table">
+            <thead>
+              <tr class="table__header">
+                <th>Generazione</th>
+                <th>Fitness</th>
+                <th>Soluzione</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
       </div>
     </main>
@@ -54,13 +64,6 @@
           <span class="footer__item__list-item">• Sito personale: <a href="https://marcocianetti.com" target="_blank">Link</a></span>
           <span class="footer__item__list-item">• LinkedIn: <a href="https://linkedin.com/in/marcocianetti" target="_blank">Link</a></span>
           <span class="footer__item__list-item">• GitHub: <a href="https://github.com/marcocianetti" target="_blank">Link</a></span>
-        </div>
-
-        <div class="flex--column">
-          <span class="footer__item__title">Credits</span>
-          <span class="footer__item__list-item">• Articolo da cui ho preso spunto: <a href="https://redstapler.co/realtime-video-processing-javascript-tutorial/" target="_blank">Link</a></span>
-          <span class="footer__item__list-item">• Video sorgente: <a href="https://www.pexels.com/video/a-woman-wearing-makeup-poses-in-different-angles-in-a-pictorial-3625060/" target="_blank">Link</a></span>
-          <span class="footer__item__list-item">• Video sfondo: <a href="https://www.pexels.com/video/blazing-fire-2715412/" target="_blank">Link</a></span>
         </div>
       </div>
     </footer>
